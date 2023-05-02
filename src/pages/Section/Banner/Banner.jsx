@@ -14,9 +14,9 @@ const Banner = () => {
                             
                         </div>
                         <div className=' md:w-4/6 mx-auto'>
-                            <p className="mb-5">We provide the best culinary services in town. Our world-class chefs use only the freshest ingredients to create delicious and healthy meals that cater to all tastes and preferences.</p>
+                            <p className="mb-5">We provide the best culinary services in Bangladesh. Our world-class chefs use only the freshest ingredients to create delicious and healthy meals that cater to all tastes and preferences.</p>
                         </div>
-                        <button className="btn btn-success">Get Started</button>
+                        <button className="btn btn-success">More Details</button>
                     </div>
                 </div>
             </div>
