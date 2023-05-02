@@ -10,11 +10,12 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
+
             <Banner></Banner>
             <ChefSection></ChefSection>
             <AboutSection></AboutSection>
             <ContactSection></ContactSection>
-
+            
             <Footer></Footer>
         </div>
     );
