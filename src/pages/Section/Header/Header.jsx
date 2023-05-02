@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div>
+        <div className='my-10'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -13,20 +13,22 @@ const Header = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><a>Home</a></li>
                             <li><a>Blog</a></li>
-                            <li><a>About</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Recipe Routes</a>
+                    <a className="btn btn-ghost normal-case text-4xl">Recipe Routes</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li><a>Home</a></li>
                         <li><a>Blog</a></li>
                         <li><a>About Us</a></li>
+                        <li><a>Contact</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                   <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                   <img src="https://ibb.co/t8x97mS" alt='user' />
                    <button className="btn btn-success ml-4">Login</button>
                 </div>
             </div>
