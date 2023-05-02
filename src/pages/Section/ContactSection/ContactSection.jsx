@@ -5,6 +5,7 @@ const ContactSection = () => {
         <div>
             <div className="max-w-lg mx-auto py-8">
                 <h2 className="text-3xl font-bold text-center mb-4">Contact Us</h2>
+                <div>
                 <form  className="space-y-4">
                     <div>
                         <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
@@ -20,6 +21,7 @@ const ContactSection = () => {
                     </div>
                     <button type="submit" className="bg-success content-center px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-200">Submit</button>
                 </form>
+                </div>
             </div>
         </div>
 

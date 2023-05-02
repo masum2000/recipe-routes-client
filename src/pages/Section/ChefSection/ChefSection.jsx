@@ -14,8 +14,9 @@ const ChefSection = () => {
             .catch(error => console.error(error))
     }, []);
 
-    const handleViewRecipes = () => {
-        navigate(`/chefs/${chefs.id}/recipes`);
+    const handleViewRecipes = (id) => {
+        navigate(`/chefs/${id}/recipes`);
+        // console.log(chefs)
     };
 
     return (
@@ -40,9 +41,7 @@ const ChefSection = () => {
                             </span>
                             <span className="inline-block bg-success rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                                 {/* <Link to={`/chef/${chef.id}`}>View Recipes</Link> */}
-                                <button className="btn btn-primary" onClick={handleViewRecipes}>
-                                    View Recipes
-                                </button>
+                                <button  onClick={()=>handleViewRecipes(chef.id)}> View Recipes </button>
                             </span>
                         </div>
                     </div>
