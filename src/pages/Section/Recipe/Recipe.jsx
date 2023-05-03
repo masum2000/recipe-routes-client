@@ -14,6 +14,7 @@ const Recipe = () => {
             try {
                 const response = await fetch('http://localhost:5000/recipe');
                 const data = await response.json();
+                console.log(data);
                 const filteredRecipe = data.filter((recipe) => recipe.chef_id === id);
                 setRecipes(filteredRecipe);
             }
