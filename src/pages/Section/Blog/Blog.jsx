@@ -7,27 +7,27 @@ const Blog = () => {
         <div>
             <Header></Header>
             <div className=" w-8/12 mx-auto ">
-            <h2 className='font-bold text-3xl text-center py-10'>Blog Page</h2>
-            <div className='bg-gray-200 p-8 mb-8 rounded-lg'>
-                <p className='font-bold text-xl'>Question: When should we use context API in react js?</p>
-                <p><span className='font-bold'>Answer:</span>  The Context API in ReactJS is used for passing data between components without the need to pass props down the component tree manually. Here are some situations when you should consider using the Context API in your ReactJS application:
-                1.When you need to share data between components that are not directly related to each other in the component tree. For example, if you have a user authentication component that needs to share its state with multiple components, you can use the Context API to pass the user state down to those components.
-                2.When you have deeply nested components that need to access data from a common parent. In this case, passing data through props can become tedious and error-prone. The Context API can simplify this process by allowing you to pass the data down to all child components in one go.</p>
+                <h2 className='font-bold text-3xl text-center py-10'>Blog Page</h2>
+                <div className='bg-gray-200 p-8 mb-8 rounded-lg'>
+                    <p className='font-bold text-xl'>Question: Tell us the differences between uncontrolled and controlled components.?</p>
+                    <p><span className='font-bold'>Answer:</span>  Controlled components in React are components whose state and behavior are controlled by the parent component. To change their state and behavior, these components rely on props sent down from the parent component. Uncontrolled components are those that manage their own state on their own.</p>
+                </div>
+                <div className='bg-gray-200 p-8 mb-8 rounded-lg '>
+                    <p className='font-bold text-xl'>Question: How to validate React props using PropTypes?</p>
+                    <p><span className='font-bold'>Answer:</span>  In React, PropTypes is a built-in type checking feature that enables developers to validate props passed to components. It helps to catch errors early and make components more reliable.(i)Install PropTypes, (ii)Import PropTypes, (iii)Define PropTypes, (iv)View PropTypes error messages. </p>
+                </div>
+                <div className='bg-gray-200 p-8 mb-8 rounded-lg'>
+                    <p className='font-bold text-xl'>Question: Tell us the difference between nodejs and express js.?</p>
+                    <p><span className='font-bold'>Answer:</span> Node.js and Express.js are both used in building server-side applications using JavaScript. However, there are some differences between them. Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It is designed to help developers create scalable network applications using event-driven I/O. It allows developers to use JavaScript on the server-side, which enables them to write the server-side code using the same language as the client-side code. Express.js, on the other hand, is a web application framework built on top of Node.js. It provides a set of features and tools for building web and mobile applications. Express.js simplifies the development process by providing developers with tools to handle HTTP requests and responses, set up middleware functions, and manage routes.</p>
+                </div>
+                <div className='bg-gray-200 p-8 mb-8 rounded-lg'>
+                    <p className='font-bold text-xl'>Question: What is a custom hook, and why will you create a custom hook?</p>
+                    <p><span className='font-bold'>Answer:</span> A custom hook in React is a JavaScript function that provides reusable functionality in functional components by utilizing built-in hooks and/or additional custom hooks. Custom hooks can be written to abstract away sophisticated logic, state management, or any other repetitive code patterns shared by components.
+                        Developers may use custom hooks to encapsulate functionality into reusable, composable modules that can be readily shared across various components. This can aid in code organization by reducing repetition and making components more declarative and simpler to read.
+                    </p>
+                </div>
             </div>
-            <div className='bg-gray-200 p-8 mb-8 rounded-lg '>
-                <p className='font-bold text-xl'>Question: What is custom hook in react js?</p>
-                <p><span className='font-bold'>Answer:</span>  Custom hooks are a powerful and flexible feature in ReactJS that can help you extract and reuse logic in your application, making it more modular and easier to A custom hook in ReactJS is a JavaScript function that uses one or more of the built-in React hooks (such as useState, useEffect, useContext, etc.) to implement some functionality that can be reused across multiple components in your application.Custom hooks allow you to encapsulate and reuse logic in your React components, making your code more modular, readable, and easier to maintain. You can think of a custom hook as a way to extract and share common functionality that is not specific to a particular component, but rather applicable to multiple components.maintain.</p>
-            </div>
-            <div className='bg-gray-200 p-8 mb-8 rounded-lg'>
-                <p className='font-bold text-xl'>Question: What is useRef in react js?</p>
-                <p><span className='font-bold'>Answer:</span> In ReactJS, useRef is a hook that returns a mutable ref object whose .current property can be set to hold a value. useRef is primarily used to access the DOM nodes or to store mutable data that is not intended to trigger a re-render of the component.</p>
-            </div>
-            <div className='bg-gray-200 p-8 mb-8 rounded-lg'>
-                <p className='font-bold text-xl'>Question: What is useMemo in js?</p>
-                <p><span className='font-bold'>Answer:</span> In ReactJS, useMemo is a hook that allows you to memoize a value, which means to cache the result of a computation so that it can be reused if the inputs to the computation have not changed. useMemo is used to optimize the performance of a component by avoiding unnecessary re-computations.</p>
-            </div>
-        </div>
-        <Footer></Footer>
+            <Footer></Footer>
         </div>
     );
 };

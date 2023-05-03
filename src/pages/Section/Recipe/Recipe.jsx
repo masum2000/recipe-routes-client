@@ -12,7 +12,7 @@ const Recipe = () => {
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
-                const response = await fetch('http://localhost:5000/recipe');
+                const response = await fetch('http://localhost:5000/chefs/${_id}');
                 const data = await response.json();
                 console.log(data);
                 const filteredRecipe = data.filter((recipe) => recipe.chef_id === id);

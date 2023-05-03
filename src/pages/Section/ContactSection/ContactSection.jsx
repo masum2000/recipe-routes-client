@@ -3,7 +3,7 @@ import React from 'react';
 const ContactSection = () => {
     return (
         <div>
-            <div className="grid grid-cols-2  gap-10 py-16 container mx-auto items-center">
+            <div className="grid md:grid-cols-2  w-10/12  gap-10 py-16 container mx-auto items-center">
                 <div className="grid grid-cols-3  gap-4 ">
                     <img src="https://img.freepik.com/free-photo/top-view-food-ingredients_23-2148834755.jpg?w=1380&t=st=1683092892~exp=1683093492~hmac=8f62c90624dd79ac1b36f85b58c561f678a96e03a81dc14ce34556343cb38255" alt="placeholder" className="w-full h-full object-cover rounded-lg" />
                     <img src="https://img.freepik.com/free-photo/top-view-delicious-salad-with-ingredients-dark-surface_140725-75212.jpg?w=1380&t=st=1683092919~exp=1683093519~hmac=a7d8d758c8270bbed227ef4dcbd99f2505a306a999c9732ce8bac8b7452911e1" alt="placeholder" className="w-full h-full object-cover rounded-lg" />
@@ -27,7 +27,7 @@ const ContactSection = () => {
                             <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
                             <textarea id="message" name="message" className="w-full border border-gray-300 p-2 rounded-md"></textarea>
                         </div>
-                        <button type="submit" className="bg-success content-center px-4 py-2 rounded-md hover:bg-green-600 transition-colors duration-200">Submit</button>
+                        <button className="border-2 border-sky-600 text-black p-3 rounded-lg bg-none font-bold   hover:bg-sky-600 duration-300 hover:text-white ">Submit</button>
                     </form>
                 </div>
             </div>

@@ -6,9 +6,9 @@ const Header = () => {
 
 
     return (
-        <div className='text-center   bg-green-300 py-3 md:px-10'>
+        <div className='text-center   bg-sky-700 py-6 md:px-10'>
             <div className=''>
-                <div className="navbar text-black">
+                <div className="navbar text-white">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label tabIndex={0} className=" lg:hidden">
@@ -21,10 +21,10 @@ const Header = () => {
                                 <li><Link to='/'>Contact Us</Link></li>
                             </ul>
                         </div>
-                        <h2 className="text-slate-900 font-bold text-4xl">Recipe Routes</h2>
+                        <h2 className="text-white font-bold text-4xl cursor-pointer">Recipe Routes</h2>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
+                        <ul className="menu menu-horizontal px-1 font-bold">
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
                             <li><Link to='/'>About Us</Link></li>
@@ -39,9 +39,9 @@ const Header = () => {
                         </Link>
 
 
-                        <button className="btn btn-dark ml-4">Logout</button>
+                        <button className="p-3 rounded-lg font-bold bg-white  text-black ml-4">Logout</button>
                         <Link>
-                            <button className="btn btn-dark ml-4">Login</button>
+                            <button className="p-3 rounded-lg font-bold bg-white  text-black ml-4">Login</button>
                         </Link>
 
                     </div>

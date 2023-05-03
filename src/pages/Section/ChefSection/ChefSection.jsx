@@ -39,7 +39,7 @@ const ChefSection = () => {
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                                 {chef.likes} likes
                             </span>
-                            <span className="inline-block bg-success rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                            <span className="inline-block bg-sky-600 text-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                                 {/* <Link to={`/chef/${chef.id}`}>View Recipes</Link> */}
                                 <button  onClick={()=>handleViewRecipes(chef.id)}> View Recipes </button>
                             </span>
