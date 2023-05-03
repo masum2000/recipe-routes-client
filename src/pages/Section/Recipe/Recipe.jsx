@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import { useParams } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const Recipe = () => {
 
@@ -62,6 +63,7 @@ const Recipe = () => {
                    </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
