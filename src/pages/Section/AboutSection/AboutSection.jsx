@@ -9,7 +9,7 @@ const AboutSection = () => {
                     <div className=''>
                         <h2 className="text-3xl font-bold mb-4">About Us</h2>
                         <p className="text-lg mb-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices nunc vitae nibh hendrerit mollis. Aliquam fringilla mauris ac nisi bibendum malesuada. In euismod erat vel lacus viverra laoreet. Nullam auctor leo vel libero malesuada pretium.
+                        "Our company was founded with the mission of providing high-quality, healthy meals to people on-the-go. We believe that eating well shouldn't have to be a hassle, and that's why we've dedicated ourselves to creating delicious meals that are both convenient and nutritious. Our team of chefs use only the freshest ingredients, and our meals are carefully crafted to meet a variety of dietary needs and preferences. Whether you're looking for a quick lunch or a full week's worth of meals, we've got you covered. We're passionate about what we do, and we're excited to share our love of healthy eating with you."
                         </p>
                         <button className="border-2 border-sky-600 text-black p-3 rounded-lg bg-none font-bold   hover:bg-sky-600 duration-300 hover:text-white ">More Details</button>
                     </div>

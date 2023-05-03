@@ -8,6 +8,8 @@ const Recipe = () => {
 
     const [recipes, setRecipes] = useState([]);
     const { id } = useParams();
+    
+  
 
     useEffect(() => {
         const fetchRecipe = async () => {
@@ -17,6 +19,7 @@ const Recipe = () => {
                 console.log(data);
                 const filteredRecipe = data.filter((recipe) => recipe.chef_id === id);
                 setRecipes(filteredRecipe);
+                
             }
             catch (error) {
                 console.error('Error fetching recipes:', error);
