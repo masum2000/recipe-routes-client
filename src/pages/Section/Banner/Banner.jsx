@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 const Banner = () => {
     return (
         <div className=''>
-            <div className="hero  md:h-screen " style={{ backgroundImage: `url(${bannerImg})`, backgroundSize: "cover",backgroundPosition: "top center"}}>
+            <div className="hero  md:h-screen " style={{ backgroundImage: `url("https://i.ibb.co/nqGjVvb/Untitled-design-1.png")`, backgroundSize: "cover",backgroundPosition: "top center"}}>
                 <div className="hero-overlay"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div>
