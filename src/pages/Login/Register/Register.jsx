@@ -96,7 +96,7 @@ const Register = () => {
                         <input type="url" name='photo' placeholder="Type here" className="input input-bordered  w-full max-w-xs" />
                     </div>
                     <button className="border-2 border-sky-600 text-black p-3 mb-3 rounded-full w-full bg-none font-bold   hover:bg-sky-600 duration-300 ">Register</button>
-                    <Link to='/login' className="link text-sky-600  text-center ">Have an Account? Login</Link>
+                    <Link to='/login' className="link text-sky-600  text-center ">Have an Account? Now Login</Link>
                 </form>
                 <div>
                     <img src="https://i.ibb.co/LhFF0xG/20824341-6368592.jpg" />
