@@ -12,5 +12,5 @@
 <li>Use a  Blog Page</li>
 <li>Use login logout Button and Profile Picture</li>
 <li>Use login and Register page .if the user is new then he need to register if his an account then he will be login </li>
-Live Link: https://career-finder.netlify.app/appliedJobs
+LiveSite Link: https://recipe-routes-client.web.app/
        
