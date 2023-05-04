@@ -95,7 +95,7 @@ const Register = () => {
                         <label htmlFor="photourl" className="block font-bold text-gray-700 mb-2">Photo Url</label>
                         <input type="url" name='photo' placeholder="Type here" className="input input-bordered  w-full max-w-xs" />
                     </div>
-                    <button className="border-2 border-sky-600 text-black p-3 mb-3 rounded-full w-full bg-none font-bold   hover:bg-sky-600 duration-300 ">Login</button>
+                    <button className="border-2 border-sky-600 text-black p-3 mb-3 rounded-full w-full bg-none font-bold   hover:bg-sky-600 duration-300 ">Register</button>
                     <Link to='/login' className="link text-sky-600  text-center ">Have an Account? Login</Link>
                 </form>
                 <div>
