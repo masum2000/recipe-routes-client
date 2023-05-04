@@ -3,7 +3,7 @@ import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import { getAuth } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../../firebase/firebase.config';
 import { AuthContext } from '../../../providers/AuthProviders';
 import Header from '../../Section/Header/Header';
@@ -16,6 +16,9 @@ const Login = () => {
     const location = useLocation()
     const from = location.state?.from?.pathname || '/';
     const auth = getAuth(app)
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+
 
     const [user, setUser] = useState(null);
 
@@ -29,7 +32,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
-                toast.success('Login successful');
+                // toast.success('Login successful');
                 setUser(loggedUser);
                 form.reset();
                 navigate(from, { replace: true })
@@ -41,11 +44,46 @@ const Login = () => {
     };
 
 
+    // googleSignIn start
+    const handleGoogleSignIn = (event) => {
+        event.preventDefault();
+        // console.log('hello from google');
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                setUser(loggedUser)
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.log('error', error.message);
+            })
+    }
+    //googleSignIn end
+
+    //github SignIn start
+    const handleGithubSignIn = event => {
+        event.preventDefault();
+        signInWithPopup(auth, githubProvider)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                setUser(loggedUser);
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+    //github SignIn End
+
+
 
 
     return (
         <div>
             <Header></Header>
+            <ToastContainer></ToastContainer>
             <div className="container w-10/12 mx-auto py-8">
                 <div className="grid grid-cols-1   md:grid-cols-2 gap-8 items-center">
                     <Form onSubmit={handleLogin}>
@@ -73,15 +111,17 @@ const Login = () => {
                                         </label>
                                     </div>
                                     <div className="form-control mt-6">
-                                    <button className="border-2 border-sky-600 text-black p-3 rounded-lg bg-none font-bold   hover:bg-sky-600 duration-300 ">Login</button>
+                                    <button onClick={() => {
+                                            toast.success('login successfully!');
+                                        }} className="border-2 border-sky-600 text-black p-3 rounded-lg bg-none font-bold   hover:bg-sky-600 duration-300 ">Login</button>
                                     </div>
                                     
                                     <div className='my-4 text-center'>
                                     <p className=' text-sky-600 font-bold text-center mb-3'>Also Connect With</p>
-                                        <button className='px-4'>
+                                        <button onClick={handleGoogleSignIn} className='px-4'>
                                             <img className='w-10' src="https://i.ibb.co/ftwyb00/Google-G-Logo-svg.png" alt="" />
                                         </button>
-                                        <button className='px-4'>
+                                        <button onClick={handleGithubSignIn} className='px-4'>
                                             <img className='w-10' src="https://i.ibb.co/VxKN3Mg/github.png" alt="" />
 
                                         </button>

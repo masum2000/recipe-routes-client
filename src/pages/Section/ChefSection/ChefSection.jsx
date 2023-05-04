@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useNavigate } from 'react-router-dom';
-import ChefsInfo from '../ChefSection/ChefsInfo';
+import ChefsInfo from '../ChefsInfo/ChefsInfo';
+
 
 
 const ChefSection = () => {
     const chefsInfo = useLoaderData();
-    console.log(chefsInfo);
+    const [isLoading, setIsLoading] = useState(true);
     // const [chefs, setChefs] = useState([]);
     
     // const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +30,8 @@ const ChefSection = () => {
 
     return (
         <div>
-            <h2 className="text-center text-3xl font-bold mb-8">Our All Chefs </h2>
+            <h2 className="text-center text-3xl font-bold mt-8">Our All Chefs </h2>
+            
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 justify-items-center">
 
          {

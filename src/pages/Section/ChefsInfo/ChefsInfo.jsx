@@ -1,9 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
-const chefsInfo = ({chefs}) => {
+const ChefsInfo = ({chefs}) => {
+    const navigate = useNavigate();
+
+    const handleViewRecipe = ()=>{
+        navigate(`/${chefs.id}`)
+    }
     return (
         <div>
+             <div>
             <div className="max-w-7xl mx-auto py-12 sm:px-6 lg:px-8">       
            <div className="max-w-sm rounded overflow-hidden shadow-lg" key={chefs.id}>
                <img className="w-full h-64 object-cover" src={chefs.picture} alt={chefs.name} />
@@ -21,16 +27,17 @@ const chefsInfo = ({chefs}) => {
                        {chefs.likes} likes
                    </span>
                    <span className="inline-block bg-sky-600 text-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                       <Link to={`/${chefs.id}`}>
-                       <button> View Recipes </button>
-                       </Link>
+                       {/* <Link to={}>
+                       
+                       </Link> */}
+                       <button onClick={handleViewRecipe}> View Recipes </button>
                    </span>
                </div>
            </div>
         </div>
         </div>
-    
+        </div>
     );
 };
 
-export default chefsInfo;
+export default ChefsInfo;
