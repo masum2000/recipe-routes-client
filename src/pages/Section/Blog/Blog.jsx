@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 
 const Blog = () => {
     return (
         <div>
             <Header></Header>
-            <div className=" w-8/12 mx-auto ">
+            <div ref={ref} className=" w-8/12 mx-auto ">
                 <h2 className='font-bold text-3xl text-center py-10'>Blog Page</h2>
                 <div className='bg-gray-200 p-8 mb-8 rounded-lg'>
                     <p className='font-bold text-xl'>Question: Tell us the differences between uncontrolled and controlled components.?</p>
@@ -25,6 +27,11 @@ const Blog = () => {
                     <p><span className='font-bold'>Answer:</span> A custom hook in React is a JavaScript function that provides reusable functionality in functional components by utilizing built-in hooks and/or additional custom hooks. Custom hooks can be written to abstract away sophisticated logic, state management, or any other repetitive code patterns shared by components.
                         Developers may use custom hooks to encapsulate functionality into reusable, composable modules that can be readily shared across various components. This can aid in code organization by reducing repetition and making components more declarative and simpler to read.
                     </p>
+                </div>
+                <div>
+                    <Pdf targetRef={ref} filename="code-example.pdf">
+                        {({ toPdf }) => <button className="bg-white hover:bg-slate-600 hover:text-white rounded-xl font-semibold text-red-600 py-3 px-5 text-xl" onClick={toPdf}>Generate Pdf</button>}
+                    </Pdf>
                 </div>
             </div>
             <Footer></Footer>

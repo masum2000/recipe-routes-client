@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 const ChefsInfo = ({chefs}) => {
     const navigate = useNavigate();
@@ -12,7 +13,8 @@ const ChefsInfo = ({chefs}) => {
              <div>
             <div className="max-w-7xl mx-auto py-12 sm:px-6 lg:px-8">       
            <div className="max-w-sm rounded overflow-hidden shadow-lg" key={chefs.id}>
-               <img className="w-full h-64 object-cover" src={chefs.picture} alt={chefs.name} />
+            <LazyLoad height={300} ><img className="w-full h-64 object-cover" src={chefs.picture} alt={chefs.name} /></LazyLoad>
+               
                <div className="px-6 py-4">
                    <div className="font-bold text-xl">{chefs.name}</div>
                </div>
