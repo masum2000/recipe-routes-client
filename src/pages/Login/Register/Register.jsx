@@ -75,10 +75,11 @@ const Register = () => {
         <div>
             <ToastContainer />
             <Header></Header>
-            <div className="container w-10/12 mx-auto py-8">
-                <div className="grid grid-cols-1   md:grid-cols-2 gap-8 items-center">
-                <form onSubmit={handleSubmit} className="w-80 p-8 rounded-lg bg-white shadow-lg">
+            <div className="container w-10/12 mx-auto ">
+                <div className="grid grid-cols-1   md:grid-cols-2  items-center">
+                <form onSubmit={handleSubmit} className=" p-8 rounded-lg  shadow-2xl bg-base-100">
                     <h2 className="text-3xl font-bold mb-4 text-center">Registration</h2>
+                    <div className='text-center'>
                     <div className="mb-4">
                         <label htmlFor="name" className="block font-bold text-gray-700 mb-2">Name</label>
                         <input type="name" name='name' placeholder="Type here" className="input input-bordered  w-full max-w-xs" />
@@ -95,8 +96,13 @@ const Register = () => {
                         <label htmlFor="photourl" className="block font-bold text-gray-700 mb-2">Photo Url</label>
                         <input type="url" name='photo' placeholder="Type here" className="input input-bordered  w-full max-w-xs" />
                     </div>
-                    <button className="border-2 border-sky-600 text-black p-3 mb-3 rounded-full w-full bg-none font-bold   hover:bg-sky-600 duration-300 ">Register</button>
+                    </div>
+                    <div className='text-center'>
+                    <button className="border-2 border-sky-600 text-black p-3 rounded-lg bg-none font-bold   hover:bg-sky-600 duration-300 ">Register</button>
+                    <div>
                     <Link to='/login' className="link text-sky-600  text-center ">Have an Account? Now Login</Link>
+                    </div>
+                    </div>
                 </form>
                 <div>
                     <img src="https://i.ibb.co/LhFF0xG/20824341-6368592.jpg" />

@@ -31,7 +31,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                // console.log(loggedUser);
                 // toast.success('Login successful');
                 setUser(loggedUser);
                 form.reset();
@@ -85,11 +85,11 @@ const Login = () => {
             <Header></Header>
             <ToastContainer></ToastContainer>
             <div className="container w-10/12 mx-auto py-8">
-                <div className="grid grid-cols-1   md:grid-cols-2 gap-8 items-center">
+                <div className="grid grid-cols-1   md:grid-cols-2  items-center">
                     <Form onSubmit={handleLogin}>
-                    <div className="hero  ">
+                    <div className="  ">
                         <div className="hero-content flex-col lg:flex-row-reverse">
-                            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                            <div className=" w-full max-w-sm shadow-2xl bg-base-100">
                                 <div className="card-body">
                                 <h2 className="text-3xl font-bold mb-4 text-center">Login</h2>
                                     <div className="form-control">
@@ -119,10 +119,10 @@ const Login = () => {
                                     <div className='my-4 text-center'>
                                     <p className=' text-sky-600 font-bold text-center mb-3'>Also Connect With</p>
                                         <button onClick={handleGoogleSignIn} className='px-4'>
-                                            <img className='w-10' src="https://i.ibb.co/ftwyb00/Google-G-Logo-svg.png" alt="" />
+                                            <img className='w-7' src="https://i.ibb.co/ftwyb00/Google-G-Logo-svg.png" alt="" />
                                         </button>
                                         <button onClick={handleGithubSignIn} className='px-4'>
-                                            <img className='w-10' src="https://i.ibb.co/VxKN3Mg/github.png" alt="" />
+                                            <img className='w-7' src="https://i.ibb.co/VxKN3Mg/github.png" alt="" />
 
                                         </button>
                                     </div>

@@ -4,13 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('environment variable', import.meta.env.VITE_appId)
 const firebaseConfig = {
-  apiKey: "AIzaSyDajCSu9whuTYWF4QDX7agypq1ylG9zSgA",
-  authDomain: "recipe-routes-client.firebaseapp.com",
-  projectId: "recipe-routes-client",
-  storageBucket: "recipe-routes-client.appspot.com",
-  messagingSenderId: "184163295665",
-  appId: "1:184163295665:web:2be2f0c7eb74e144a59d90"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

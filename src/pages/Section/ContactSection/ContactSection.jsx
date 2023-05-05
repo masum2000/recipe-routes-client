@@ -13,7 +13,7 @@ const ContactSection = () => {
                     <img src="https://img.freepik.com/free-photo/top-view-greens-seasonings-with-sliced-onions-notepad-dark-desk-salad-food-meal-vegetable-snack_140725-40291.jpg?w=1380&t=st=1683092986~exp=1683093586~hmac=d2591c05691d5cce8e12dec41e163526a5c7f2db4c24742114438b9e2ff0ba07" alt="placeholder" className="w-full h-full object-cover rounded-lg" />
                 </div>
                 <div>
-                    <h2 className="text-3xl font-bold mb-8">Contact Us</h2>
+                    <h2 className="text-sky-600  text-3xl font-bold mb-8">Contact Us</h2>
                     <form className="space-y-4">
                         <div>
                             <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
@@ -27,7 +27,7 @@ const ContactSection = () => {
                             <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
                             <textarea id="message" name="message" className="w-full border border-gray-300 p-2 rounded-md"></textarea>
                         </div>
-                        <button className="border-2 border-sky-600 text-black p-3 rounded-lg bg-none font-bold   hover:bg-sky-600 duration-300 hover:text-white ">Submit</button>
+                        <button className="border-2  border-sky-600 text-black p-3 rounded-lg bg-none font-bold   hover:bg-sky-600 duration-300 hover:text-white ">Submit</button>
                     </form>
                 </div>
             </div>
